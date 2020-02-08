@@ -1,0 +1,149 @@
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+#text1, #text2, #text3, #text4, #text5, #text6, #text7, #text8 {
+    color: black;
+    overflow: hidden;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 3px solid white;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+}
+
+a.text div, #text1, #text2, #text3, #text4 {
+    margin: 3% 10% 0 2%;
+}
+
+a.text div, #text5, #text6, #text7, #text8 {
+    margin: 2% 0 0 13%;
+}
+
+.text-target {
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    opacity: 0;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+    overflow: hidden;
+}
+
+.text-target div {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom: 0;
+    max-height: 0%;
+    max-width: 0%;
+    border: 3px solid white;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+    box-sizing: border-box;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+a.text-close {
+    display: block;
+    width:50px;
+    height:50px;
+    box-sizing: border-box;
+    background: white;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    top: -80px;
+    right: 0;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+a.text-close:before {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 1px;
+    background: black;
+    position: absolute;
+    left: 26px;
+    top: 10px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+a.text-close:after {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 1px;
+    background: black;
+    position: absolute;
+    left: 26px;
+    top: 10px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.text-target:target {
+    opacity: 1;
+    background: white;
+    font-size: 20;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+}
+
+.text-target:target div {
+    max-height: 100%;
+    max-width: 100%;
+    padding-top: 50px;
+}
+
+.text-target:target a.text-close {
+    top: 0px;
+}
+
+#boxes {
+    text-align: center;
+    width: 100%;
+}
+
+#boxes div {
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    margin-right: 40px;
+    border: 3px solid red;
+    border-radius: 15%;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+input[type=submit] {
+    cursor:pointer;
+    background-color: lightgreen;
+    border-radius: 15%;
+    width: 5%;
+    height: 3%;
+    margin-top: 2%;
+}
+
+.buttonContainer {
+    text-align: center;
+}
